@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "environment_db2",
+    "database": "ux0q1wuv439lywrf",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
