@@ -5,6 +5,7 @@
 // *** Dependencies
 // =============================================================
 var express = require("express");
+var favicon = require('serve-favicon');
 var bodyParser = require("body-parser");
 var _ = require('lodash');
 
