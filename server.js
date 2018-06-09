@@ -12,7 +12,7 @@ var _ = require('lodash');
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT;
+var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -35,14 +35,14 @@ require("./routes/neighbor-api-routes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
-// app.listen(PORT, function() {
-//   console.log("App listening on PORT " + PORT);
-// });
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
+});
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
-});
+// db.sequelize.sync().then(function() {
+//   app.listen(PORT, function() {
+//     console.log("App listening on PORT " + PORT);
+//   });
+// });
